@@ -1,0 +1,161 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header-background {
+  background-color: #F5F3F5;
+}
+
+.text-left {
+  text-align: 'left'
+}
+
+.text-center {
+  text-align: 'center' !important;
+}
+
+.quick-link {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.footer-style {
+  color: white !important;
+  background-image: url('../src/imgs/footer-abs-background.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+.subscribe {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.top-bar-background {
+  background-color: #EFEFEF;
+}
+
+.sponsors-div {
+  background-image: url('../src/imgs/bg_bggenerator_com.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.yellow-font {
+  color:#F5951C;
+}
+
+.yellow-back {
+  background-color: #F5951C !important;
+  overflow-x: hidden;
+}
+
+.orange-back {
+  background-color: #fc6a20 !important;
+  overflow-x: hidden;
+}
+
+.white-font {
+  color: white !important;
+}
+
+.nav-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 11px;
+  color: #080808;
+  margin-right: 0px;
+  text-transform: uppercase;
+  border-right: #525252 solid 1px
+}
+
+.header-text-blue {
+  color: #1F4E79 !important;
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 35px !important;
+}
+
+
+.nav-blue-text {
+  color: #1F4E79 !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.header-text-red {
+  color: #8B0000;
+}
+
+.topbar-background {
+  background-image: linear-gradient(to right, #002c5b 0%, #002c5b 70%, #fc6a20 70%, #fc6a20 100%);
+  height: 50px
+}
+
+.text-orange {
+  color: #fc6a20 !important;
+}
+
+.orange-hr {
+  border: none;
+  height: 1px;
+  /* Set the hr color */
+  color: #fc6a20; /* old IE */
+  background-color: #fc6a20; /* Modern Browsers */
+  opacity: 0.25
+}
+
+.past-event-list {
+  border: none !important;
+}
+
+.nav-link-route {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0d6efd !important;
+  text-decoration: none !important;
+}
+
+a:active {
+  color: #0d6efd !important;
+}
