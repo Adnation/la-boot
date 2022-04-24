@@ -97,14 +97,14 @@
 }
 
 .nav-text {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 11px;
-  color: #080808;
-  margin-right: 0px;
-  text-transform: uppercase;
-  border-right: #525252 solid 1px
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 11px !important;
+  color: #080808 !important;
+  margin-right: 0px !important;
+  text-transform: uppercase !important;
+  border-right: #525252 solid 1px !important;
 }
 
 .header-text-blue {
@@ -147,8 +147,14 @@
 
 .nav-link-route {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  color: white;
-  text-decoration: none;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.admin-db-link {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  color: black !important;
+  text-decoration: none !important;
 }
 
 a:hover {

@@ -63,7 +63,7 @@ const Footer = () => <footer className="page-footer font-small blue pt-4 footer-
                             <strong><Telephone className="text-orange"/></strong> Please call any committee members
                         </div>
                         <div>
-                            <strong><EnvelopePaper className="text-orange"/> </strong><a href="mailto:la-dfw@gmail.com">la-dfw@gmail.com</a>
+                            <strong><EnvelopePaper className="text-orange"/> </strong><a href="mailto:la-dfw@gmail.com">lohanadfw@gmail.com</a>
                         </div>
                     </Col>
                 </Row>

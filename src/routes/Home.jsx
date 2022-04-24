@@ -13,23 +13,4 @@ export default function Home(props) {
         <HomeSponsorsGallery />
         <HomePhotoGallery />
     </div>
-    
-    // <Container>
-    // <Row>
-    //     <Col>
-    //         <Hero />
-    //         <HomeWelcome />
-    //     </Col>
-    // </Row>
-    // <Row>
-    //     <Col>
-    //         <HomePhotoGallery />
-    //     </Col>
-    // </Row>
-    // <Row>
-    //     <Col>
-    //         <HomeSponsorsGallery />
-    //     </Col>
-    // </Row>
-    // </Container>
 }

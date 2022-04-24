@@ -24,7 +24,7 @@ export default function Home(props) {
                     </div>
                     <p className="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
                 </a>
-                <a href="/events" className="list-group-item list-group-item-action flex-column align-items-start">
+                <a href="/news" className="list-group-item list-group-item-action flex-column align-items-start">
                     <small className="yellow-font">View All</small>
                 </a>
             </div>

@@ -57,11 +57,6 @@ export default function Events() {
                                     <Button onClick={incrementCount} variant="success">+</Button>
                                 </div>
                                 </Form.Group>
-                                
-
-                                
-
-
                                 <Button variant="primary" type="submit">
                                     Submit
                                 </Button>
