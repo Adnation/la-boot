@@ -74,8 +74,17 @@ export default function Home(props) {
                     </div>
                 </Carousel>
             </Row>
+            {/* <Row>&nbsp;</Row>
             <Row>&nbsp;</Row>
             <Row>&nbsp;</Row>
+            <Row>&nbsp;</Row>
+            <Row><h1 className="text-orange">Comming Soon</h1></Row>
+            <Row>&nbsp;</Row>
+            <Row>&nbsp;</Row>
+            <Row>&nbsp;</Row>
+            <Row>&nbsp;</Row>
+            <Row>&nbsp;</Row>
+            <Row>&nbsp;</Row> */}
             <Row>&nbsp;</Row>
         </Container>
     </div>

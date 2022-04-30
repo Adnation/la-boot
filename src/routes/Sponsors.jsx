@@ -12,9 +12,9 @@ export default function Events() {
                 {Array.from({ length: 8 }).map((_, idx) => (
                     <Col>
                         <Card>
-                            <Card.Img variant="top" src={require('../imgs/sponsor-abs.jpg')} />
+                            <Card.Img variant="top" src={require('../imgs/logo-soon1.png')} />
                             <Card.Body>
-                                <Card.Title>Our Proud Sponsor {idx+1}</Card.Title>
+                                <Card.Title>Coming Soon</Card.Title>
                             </Card.Body>
                         </Card>
                     </Col>

@@ -1,39 +1,104 @@
+import env from "react-dotenv";
 import { Container, Card, Row, Col, Accordion, ListGroup, Badge } from "react-bootstrap"
+import React, { useEffect, useState } from 'react'
 
 export default function Events() {
+
+    const [events, setEvents] = useState([])
+    const [pastEvents, setPastEvents] = useState([])
+    
+
+    useEffect(() => {
+        fetch(`${env.API_BASE_URL}/events`)
+        .then(res => res.json())
+        .then(
+            (Revents) => {
+                setEvents(Revents);
+            }
+        )
+        .catch(
+            (error) => {
+            console.log("Failed to load upcoming events");
+            console.log(error);
+            }
+        )
+        fetch(`${env.API_BASE_URL}/events/past-events`)
+        .then(res => res.json())
+        .then(
+            (Revents) => {
+                setPastEvents(Revents);
+            }
+        )
+        .catch(
+            (error) => {
+            console.log("Failed to load past events");
+            console.log(error);
+            }
+        )
+      }, [])
+
     return <Container>
         <div>&nbsp;</div>
         <Row>
             <Col md={8}>
                 <Row><h5 className="text-orange">Upcoming Events</h5></Row>
                 <Row xs={1} md={1} className="g-4">
-                    <Accordion defaultActiveKey="0">
-                        {Array.from({ length: 6 }).map((_, idx) => (
-                            <Accordion.Item eventKey={idx}>
+                    <Accordion defaultActiveKey={0}>
+
+                    {events.map((event, index) => (
+                        <Accordion.Item eventKey={index}>
                             <Accordion.Header>
-                                <Card.Title>
-                                    Upcoming Event {idx+1}
+                                <Card.Title className="text-center">
+                                    {event.name}
                                 </Card.Title>
                             </Accordion.Header>
                             <Accordion.Body>
-                                <Card.Body>Body content for event {idx+1}</Card.Body>
+                                <Card.Body className="text-justify">
+                                    <Row>
+                                        <Col md={6}>
+                                            {event.place ? (
+                                                <span>Place: <strong>{event.place}</strong></span>
+                                            ) : (
+                                                <span></span>
+                                            ) }
+                                        </Col>
+                                        <Col md={6} className="text-right">
+                                            {event.place ? (
+                                                <span>Date: <strong>{event.date}</strong></span>
+                                            ) : (
+                                                <span></span>
+                                            ) }
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col md={6}>
+                                            {event.place ? (
+                                                <span>Duration: <strong>{event.time}</strong></span>
+                                            ) : (
+                                                <span></span>
+                                            ) }
+                                        </Col>
+                                    </Row>
+                                    <div>&nbsp;</div>
+                                    {event.description}
+                                </Card.Body>
                             </Accordion.Body>
-                        </Accordion.Item>    
-                        ))}
+                        </Accordion.Item>
+                    ))}
                     </Accordion>
                 </Row>
             </Col>
             <Col md={4}>
             <Row><h5 className="text-orange">Past Events</h5></Row>
             <ListGroup as="ol" variant="flush">
-                {Array.from({ length: 6 }).map((_, idx) => (
-                    <ListGroup.Item as="li" className="past-event-list justify-content-between align-items-start">
-                    <div className="ms-2 me-auto">
-                        <div className="fw-bold">Recent event {idx + 1}</div>
-                            Recently concluded event details {idx + 1}
-                        </div>
-                    </ListGroup.Item>
-                ))}
+            {pastEvents.map((event, index) => (
+                <ListGroup.Item as="li" className="past-event-list justify-content-between align-items-start">
+                <div className="ms-2 me-auto">
+                    <div className="fw-bold">{event.name}</div>
+                        {event.description}
+                    </div>
+                </ListGroup.Item>
+            ))}
             </ListGroup>
             </Col>
         </Row>

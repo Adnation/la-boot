@@ -8,25 +8,59 @@ const fetchMembers = async () => {
     return json.result
 }
 
+// const styles = {
+//     card: {
+//       backgroundColor: '#B7E0F2',
+//       borderRadius: 55,
+//       padding: '3rem'
+//     }
+// }
+
 export default function Events() {
     
-    const [members, setMembers] = useState([])
-
-    useEffect(() => {
-        fetch(`${env.API_BASE_URL}/committee`)
-        .then(res => res.json())
-        .then(
-            (members) => {
-                setMembers(members);
-            }
-        )
-        .catch(
-        (error) => {
-          console.log("Failed to load committee members");
-          console.log(error);
+    const [members, setMembers] = useState([
+        {
+            'name': 'Amit Thakkar',
+            'role': 'President',
+            'image_src': require('../imgs/committee/member.png')
+        },
+        {
+            'name': 'Shital Thakkar',
+            'role': 'Vice President',
+            'image_src': require('../imgs/committee/sheetal.jpeg')
+        },
+        {
+            'name': 'Mayur Thakkar',
+            'role': 'Secretary',
+            'image_src': require('../imgs/committee/mayur.jpeg')
+        },
+        {
+            'name': 'Trupti Thakkar',
+            'role': 'Treasurer',
+            'image_src': require('../imgs/committee/trupti.jpeg')
+        },
+        {
+            'name': 'Jay Thakkar',
+            'role': 'Joint Secretary',
+            'image_src': require('../imgs/committee/jay.jpeg')
         }
-      )
-      }, [])
+    ])
+
+    // useEffect(() => {
+    //     fetch(`${env.API_BASE_URL}/committee`)
+    //     .then(res => res.json())
+    //     .then(
+    //         (members) => {
+    //             setMembers(members);
+    //         }
+    //     )
+    //     .catch(
+    //     (error) => {
+    //       console.log("Failed to load committee members");
+    //       console.log(error);
+    //     }
+    //   )
+    //   }, [])
     
     return (<Container>
         <div>&nbsp;</div>
@@ -38,7 +72,7 @@ export default function Events() {
         {members.map(member => (
             <Col>
                 <Card>
-                <Card.Img variant="top" src={`data:image/jpeg;base64,${member.picture_bin.$binary.base64}`} />
+                <Card.Img variant="top" src={member.image_src} height={350} />
                 <Card.Body>
                     <Card.Title>{member.name}</Card.Title>
                     <Card.Text>{member.role}</Card.Text>

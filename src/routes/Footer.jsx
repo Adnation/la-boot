@@ -1,9 +1,79 @@
-import React from "react"
-import { ListGroup, Form, Button, Row, Col } from 'react-bootstrap/';
-import { GeoAlt, Telephone, EnvelopePaper } from 'react-bootstrap-icons';
+import env from "react-dotenv";
+import React, { useState } from "react";
+import { ListGroup, Form, Button, Row, Col, Alert } from 'react-bootstrap/';
+import { GeoAlt, Telephone, EnvelopePaper, Quote } from 'react-bootstrap-icons';
 import { Link } from "react-router-dom";
 
-const Footer = () => <footer className="page-footer font-small blue pt-4 footer-style">
+export default function Footer() {
+    
+    const [subFormData, setSubFormData] = useState({
+        subName: "",
+        subPhone: "",
+        subEmail: ""
+    })
+
+    const [subError, setSubError] = useState(false);
+    const [subSuccess, setSubSuccess] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const handleChange = e => setSubFormData({...subFormData, [e.target.name]: e.target.value})
+
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        if (subFormData.subName === '') {
+            setErrorMessage("Name can not be empty");
+            setSubError(true);
+            return false;
+        }
+
+        if (subFormData.subPhone === '') {
+            setErrorMessage("Phone can not be empty");
+            setSubError(true);
+            return false;
+        }
+
+        if (/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/gm.test(subFormData.subPhone) === false) {
+            setErrorMessage("Invalid phone number. Please use 123-456-7890 format.");
+            setSubError(true);
+            return false;
+        }
+
+        if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(subFormData.subEmail) === false) {
+            setErrorMessage("Please provide a valid email address");
+            setSubError(true);
+            return false;
+        }
+
+        if (subFormData.subEmail === '') {
+            setErrorMessage("Email can not be empty");
+            setSubError(true);
+            return false;
+        }
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify({
+            "name": subFormData.subName,
+            "phone": subFormData.subPhone,
+            "email": subFormData.subEmail
+        });
+
+        var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+        };
+        
+        fetch(`${env.API_BASE_URL}/subscribers`, requestOptions)
+        .then(response => {response.text(); setSubSuccess(true); setSubFormData({subName: '', subPhone: '', subEmail:'' })})
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+    }
+    
+    return <footer className="page-footer font-small blue pt-4 footer-style"> 
     <div className="container-fluid text-center text-md-left">
         <div className="row">
             <div className="col-md-2 mb-md-0 mb-2"></div>
@@ -57,7 +127,7 @@ const Footer = () => <footer className="page-footer font-small blue pt-4 footer-
                         <h5 className="text-orange">CONTACT US</h5>
                         <hr></hr>
                         <div>
-                            <strong><GeoAlt className="text-orange"/></strong> 123 Street Dr, Dallas, TX 75080
+                            <strong><GeoAlt className="text-orange"/></strong> 13105 Secretariat Boulevard, Frisco, TX
                         </div>
                         <div>
                             <strong><Telephone className="text-orange"/></strong> Please call any committee members
@@ -83,54 +153,80 @@ const Footer = () => <footer className="page-footer font-small blue pt-4 footer-
                 
             </div>
         </div>
+        <hr></hr>
+        <Row>
+            <Col md={2}></Col>
+            <Col md={8}>
+                {subSuccess ? (
+                    <Alert variant="success" onClose={() => setSubSuccess(false)} dismissible>
+                        Success! You have joined the subscription list.</Alert> ) : 
+                    (<span></span>) }
+                {subError ? (
+                    <Alert variant="danger" onClose={() => setSubError(false)} dismissible>
+                        Failed! {errorMessage}</Alert> ) : 
+                    (<span></span>) }
+            </Col>
+            <Col md={2}></Col>
+            
+        </Row>
         <div className="row">
-        <footer className="page-footer font-small blue pt-4 text-center">
-            <div className="container-fluid text-center text-md-left">
-                <div className="row">
-                    <div className="col-md-12 mb-md-0 mb-12">
-                        <h6>JOIN US FOR MEMBER’S NEWS LETTER</h6>
+            <footer className="page-footer font-small blue pt-4 text-center">
+                <div className="container-fluid text-center text-md-left">
+                    <div className="row">
+                        <div className="col-md-12 mb-md-0 mb-12">
+                            <h6>JOIN US FOR MEMBER’S NEWSLETTERS</h6>
+                        </div>
+                        <div>&nbsp;</div>
                     </div>
-                    <div>&nbsp;</div>
+                    <div className="row">
+                        <div className="col-md-3 mb-md-0 mb-2"></div>
+                        <div className="col-md-2 mb-md-0 mb-2">
+                            <Form.Group controlId="formBasicEmail">
+                                <Form.Control 
+                                type="text"
+                                placeholder="Enter name"
+                                value={subFormData.subName}
+                                name="subName"
+                                onChange={e => handleChange(e)} />
+                            </Form.Group>
+                        </div>
+                        <div className="col-md-2 mb-md-0 mb-2">
+                            <Form.Group className="mb-2" controlId="formBasicEmail">
+                                <Form.Control
+                                type="tel"
+                                placeholder="Enter phone: 123-456-7890"
+                                value={subFormData.subPhone}
+                                name="subPhone"
+                                onChange={e => handleChange(e)} />
+                            </Form.Group>
+                        </div>
+                        <div className="col-md-2 mb-md-0 mb-2">
+                            <Form.Group className="mb-2" controlId="formBasicEmail">
+                                <Form.Control
+                                type="email" 
+                                placeholder="Enter email" 
+                                value={subFormData.subEmail} 
+                                name="subEmail"
+                                onChange={e => handleChange(e)} />
+                            </Form.Group>
+                        </div>
+                        <div className="col-md-1 mb-md-0 mb-1">
+                            <button 
+                            type="button"
+                            className="btn orange-back white-font"
+                            onClick={handleSubmit}
+                            >
+                                Subscribe
+                            </button>
+                        </div>
+                        <div className="col-md-2 mb-md-0 mb-1"></div>
+                    </div>
+                    <div className="footer-copyright text-center py-3">© 2022 Copyright:
+                        <span><a href="https://techwishsolutions.com/" target="_blank">TechwishSolutions</a></span>
+                    </div>
                 </div>
-            <div className="row">
-            <div className="col-md-2 mb-md-0 mb-2"></div>
-            <div className="col-md-2 mb-md-0 mb-2">
-                <Form.Group controlId="formBasicEmail">
-                    <Form.Control type="text" placeholder="Enter name" />
-                </Form.Group>
-            </div>
-            <div className="col-md-2 mb-md-0 mb-2">
-                <Form.Group >
-                    <Form.Select className="form-control mb-2" id="exampleFormControlSelect1" searchable="Select Country Code">
-                        <option>United States(+1)</option>
-                        <option>India (+91)</option>
-                        <option>United Kingdom (+44)</option>
-                        <option>Australia (+61)</option>
-                        <option>New Zealand (+64)</option>
-                    </Form.Select>
-                </Form.Group>
-            </div>
-            <div className="col-md-2 mb-md-0 mb-2">
-                <Form.Group className="mb-2" controlId="formBasicEmail">
-                    <Form.Control type="tel" placeholder="Enter phone" />
-                </Form.Group>
-            </div>
-            <div className="col-md-2 mb-md-0 mb-2">
-                <Form.Group className="mb-2" controlId="formBasicEmail">
-                    <Form.Control type="email" placeholder="Enter email" />
-                </Form.Group>
-            </div>
-            <div className="col-md-1 mb-md-0 mb-1">
-                <button type="button" className="btn orange-back white-font">Subscribe</button>
-            </div>
-        </div>
-        <div className="footer-copyright text-center py-3">© 2022 Copyright:
-            <span><a href="https://techwishsolutions.com/" target="_blank">TechwishSolutions</a></span>
-        </div>
-    </div>
-    </footer>
+            </footer>
         </div>
     </div>
 </footer>
-
-export default Footer
+}

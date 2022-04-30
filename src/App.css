@@ -73,6 +73,7 @@
 
 .sponsors-div {
   background-image: url('../src/imgs/bg_bggenerator_com.jpg');
+  /* background-image: url('../src/imgs/coming_soon_bg.jpg'); */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */

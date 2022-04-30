@@ -1,8 +1,44 @@
+import env from "react-dotenv";
+import React, { useEffect, useState } from 'react'
+
+
 export default function Home(props) {
+    
+    const [events, setEvents] = useState([])
+    
+    useEffect(() => {
+        fetch(`${env.API_BASE_URL}/events`)
+        .then(res => res.json())
+        .then(
+            (Revents) => {
+                setEvents(Revents);
+            }
+        )
+        .catch(
+            (error) => {
+            console.log("Failed to load upcoming events");
+            console.log(error);
+            }
+        )
+      }, [])
+
     return <div className="text-justify">
             <div >&nbsp;</div>
             <div><h5 className="text-center">Upcoming events</h5></div>
+
             <div className="list-group">
+                {events.map((event, index) => (
+                    <a href="/events" className="list-group-item list-group-item-action flex-column align-items-start">
+                        <div className="d-flex w-100 justify-content-between">
+                        <h5 className="mb-">{event.name}</h5>
+                        <small>{event.date}</small>
+                        </div>
+                        <p className="mb-1">{event.summary}</p>
+                    </a>
+                ))}
+            </div>
+            
+            {/* <div className="list-group">
                 <a href="#" className="list-group-item list-group-item-action flex-column align-items-start">
                     <div className="d-flex w-100 justify-content-between">
                     <h5 className="mb-1">Event Heading 1</h5>
@@ -41,6 +77,6 @@ export default function Home(props) {
                 <a href="/events" className="list-group-item list-group-item-action flex-column align-items-start">
                     <small className="yellow-font">View All</small>
                 </a>
-            </div>
+            </div> */}
         </div> 
     }
