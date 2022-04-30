@@ -6,7 +6,7 @@ export default function Home(props) {
     return <Container>
     <Row>
         <Col>
-            <Image className="d-block w-100" src={require('../imgs/fixed-background3.jpg')} />
+            <Image className="d-block w-100" src={process.env.PUBLIC_URL + '/imgs/fixed-background3.jpg'} />
             {/* <Card>
                 <Card.Img src={require('../imgs/fixed-background3.jpg')} />
             </Card> */}

@@ -12,7 +12,7 @@ export default function Events() {
             <div>&nbsp;</div>
             <Row >
                 <Col>
-                    <Image src={require('../imgs/j-bapa-about.jpg')} fluid />
+                    <Image src={process.env.PUBLIC_URL + '/imgs/j-bapa-about.jpg'} fluid />
                 </Col>
                 <Col md={6} className="text-justify">
                     <span>
@@ -73,7 +73,7 @@ export default function Events() {
                 </Col>
                 
                 <Col md={2}>
-                    <Image src={require('../imgs/dariyalal.jpg')} fluid />
+                    <Image src={process.env.PUBLIC_URL + '/imgs/dariyalal.jpg'} fluid />
                 </Col>
             </Row>
             <Row>

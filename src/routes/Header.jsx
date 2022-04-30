@@ -6,9 +6,8 @@ export default function Header(props) {
     return <div className='top-bar-background' >
       <Container>
         <Row className="align-items-center">
-        
           <Col sm={2}>
-            <img src={require('../imgs/logo2.jpg')} className="d-inline-block align-top App-logo" width="200" height="175" />
+            <img src={process.env.PUBLIC_URL + '/imgs/logo2.jpg'} className="d-inline-block align-top App-logo" width="200" height="175" />
           </Col>
           <Col sm={8}>
             <div>
@@ -23,7 +22,7 @@ export default function Header(props) {
             </div>
           </Col>
           <Col sm={2} className="d-none d-sm-block">
-            <Image src={require('../imgs/j-bapa.jpg')} className="rounded-circle"  width="100" height="150"  />
+            <Image src={process.env.PUBLIC_URL + '/imgs/j-bapa.jpg'} className="rounded-circle"  width="100" height="150"  />
           </Col>
         </Row>
       </Container>

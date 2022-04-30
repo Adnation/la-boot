@@ -146,7 +146,7 @@ export default function Footer() {
                     <Col md={12}>&nbsp;</Col>
                     <Col md={12}>
                         <a href="https://www.facebook.com/groups/228420225910326" target="_blank">
-                            <img src={require('../imgs/fb.jpg')}></img>
+                            <img src={process.env.PUBLIC_URL + '/imgs/fb.jpg'}></img>
                         </a>
                     </Col>
                 </Row>

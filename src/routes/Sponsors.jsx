@@ -12,7 +12,7 @@ export default function Events() {
                 {Array.from({ length: 8 }).map((_, idx) => (
                     <Col>
                         <Card>
-                            <Card.Img variant="top" src={require('../imgs/logo-soon1.png')} />
+                            <Card.Img variant="top" src={process.env.PUBLIC_URL + '/imgs/logo-soon1.png'} />
                             <Card.Body>
                                 <Card.Title>Coming Soon</Card.Title>
                             </Card.Body>
