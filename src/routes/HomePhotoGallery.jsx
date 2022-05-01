@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import env from "react-dotenv";
 import Carousel from "react-multi-carousel";
 import WithStyles from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -25,6 +26,25 @@ const responsive = {
   };
 
 export default function Home(props) {
+
+    const [photos, setPhotos] = useState([]);
+
+    useEffect(() => {
+        fetch(`${env.API_BASE_URL}/events/get-latest-photos`)
+        .then(res => res.json())
+        .then(
+            (Revents) => {
+                setPhotos(Revents);
+            }
+        )
+        .catch(
+            (error) => {
+            console.log("Failed to load latest photos");
+            console.log(error);
+            }
+        )
+      }, [])
+
     return <div>
         <div>
             <Container>
@@ -33,46 +53,14 @@ export default function Home(props) {
                 <Row>&nbsp;</Row>
                 <Row>
                     <Carousel responsive={responsive}>
+                    {photos.map(photo => (
                         <div className='px-5'>
                             <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
+                                <Card.Img variant="top" 
+                                src={`${photo.src}?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"`} />
                             </Card>
                         </div>
-                        <div className='px-5'>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
-                            </Card>
-                        </div>
-                        <div className='px-5'>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1550330039-a54e15ed9d33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
-                            </Card>
-                        </div>
-                        <div className='px-5'>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1550064824-8f993041ffd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
-                            </Card>
-                        </div>
-                        <div className='px-5'>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
-                            </Card>
-                        </div>
-                        <div className='px-5'>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
-                            </Card>
-                        </div>
-                        <div className='px-5'>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1550064824-8f993041ffd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
-                            </Card>
-                        </div>
-                        <div className='px-5'>
-                            <Card>
-                                <Card.Img variant="top" src="https://images.unsplash.com/photo-1550330039-a54e15ed9d33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
-                            </Card>
-                        </div>
+                    ))}
                     </Carousel>
                 </Row>
                 <Row>&nbsp;</Row>

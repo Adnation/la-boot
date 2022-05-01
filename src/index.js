@@ -15,7 +15,7 @@ import CommitteeTable from './routes/CommitteeTable';
 
 import About from './routes/About';
 import Sponsors from './routes/Sponsors';
-import Gallery from './routes/Gallery';
+import Gallery from './routes/EventGallery';
 import Contact from './routes/Contact';
 import RSVP from './routes/RSVP';
 import Login from './routes/Login';
