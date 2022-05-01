@@ -77,7 +77,7 @@ export default function Events() {
         {members.map(member => (
             <Col>
                 <Card>
-                <Card.Img variant="top" src={member.image_src.default} height={350} />
+                <Card.Img variant="top" src={member.image_src} height={350} />
                 <Card.Body>
                     <Card.Title>{member.name}</Card.Title>
                     <Card.Text>{member.role}</Card.Text>
