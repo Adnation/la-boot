@@ -28,8 +28,8 @@ export default function Events() {
         {
             'name': 'Shital Thakkar',
             'role': 'Vice President',
-            // 'image_src': require('../imgs/committee/sheetal.jpeg')
-            'image_src': process.env.PUBLIC_URL + '/imgs/committee/sheetal.jpeg'
+            'image_src': require('../imgs/committee/sheetal.jpeg')
+            // 'image_src': process.env.PUBLIC_URL + '/imgs/committee/sheetal.jpeg'
         },
         {
             'name': 'Mayur Thakkar',
