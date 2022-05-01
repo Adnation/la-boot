@@ -228,7 +228,8 @@ export default function Events() {
                                 <Card.Text>
                                     Please use <a href="#">lohanadfw@gmail.com</a> to make payment using Zelle.
                                     <hr></hr>
-                                    Alternatively, Scan the below QR code to make payment using using your smartphone.
+                                    <div><strong>Pay using QR Code</strong></div>
+                                    Scan the below QR code to make payment using using your smartphone.
                                     <Row>
                                         <Col md={3}></Col>
                                         <Col md={6}>
