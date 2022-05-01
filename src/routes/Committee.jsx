@@ -74,7 +74,52 @@ export default function Events() {
         </div>
         <div>&nbsp;</div>
         <Row xs={1} md={3} className="g-4">
-        {members.map(member => (
+            <Col>
+                <Card>
+                <Card.Img variant="top" src={require('../imgs/committee/member.png')} height={350} />
+                <Card.Body>
+                    <Card.Title>Amit Thakkar</Card.Title>
+                    <Card.Text>President</Card.Text>
+                </Card.Body>
+                </Card>
+            </Col>
+            <Col>
+                <Card>
+                <Card.Img variant="top" src={require('../imgs/committee/sheetal.jpeg')} height={350} />
+                <Card.Body>
+                    <Card.Title>Shital Thakkar</Card.Title>
+                    <Card.Text>Vice President</Card.Text>
+                </Card.Body>
+                </Card>
+            </Col>
+            <Col>
+                <Card>
+                <Card.Img variant="top" src={require('../imgs/committee/mayur.jpeg')} height={350} />
+                <Card.Body>
+                    <Card.Title>Mayur Thakkar</Card.Title>
+                    <Card.Text>Secretary</Card.Text>
+                </Card.Body>
+                </Card>
+            </Col>
+            <Col>
+                <Card>
+                <Card.Img variant="top" src={require('../imgs/committee/trupti.jpeg')} height={350} />
+                <Card.Body>
+                    <Card.Title>Trupti Thakkar</Card.Title>
+                    <Card.Text>Treasurer</Card.Text>
+                </Card.Body>
+                </Card>
+            </Col>
+            <Col>
+                <Card>
+                <Card.Img variant="top" src={require('../imgs/committee/jay.jpeg')} height={350} />
+                <Card.Body>
+                    <Card.Title>Jay Thakkar</Card.Title>
+                    <Card.Text>Joint Secretary</Card.Text>
+                </Card.Body>
+                </Card>
+            </Col>
+        {/* {members.map(member => (
             <Col>
                 <Card>
                 <Card.Img variant="top" src={member.image_src} height={350} />
@@ -84,7 +129,7 @@ export default function Events() {
                 </Card.Body>
                 </Card>
             </Col>
-        ))}
+        ))} */}
         </Row>
         <div>&nbsp;</div>
     </Container>);
