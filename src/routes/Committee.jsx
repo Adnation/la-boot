@@ -85,7 +85,7 @@ export default function Events() {
             </Col>
             <Col>
                 <Card>
-                <Card.Img variant="top" src={require('../imgs/committee/sheetal.jpeg')} height={350} />
+                <Card.Img variant="top" src={require('../imgs/committee/sheetal1.jpg')} height={350} />
                 <Card.Body>
                     <Card.Title>Shital Thakkar</Card.Title>
                     <Card.Text>Vice President</Card.Text>
