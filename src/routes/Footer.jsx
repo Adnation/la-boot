@@ -167,7 +167,6 @@ export default function Footer() {
                     (<span></span>) }
             </Col>
             <Col md={2}></Col>
-            
         </Row>
         <div className="row">
             <footer className="page-footer font-small blue pt-4 text-center">
