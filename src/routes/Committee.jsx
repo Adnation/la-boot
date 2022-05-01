@@ -22,31 +22,31 @@ export default function Events() {
         {
             'name': 'Amit Thakkar',
             'role': 'President',
-            'image_src': require('../imgs/committee/member.png').default
+            'image_src': require('../imgs/committee/member.png')
             // 'image_src': process.env.PUBLIC_URL + '/imgs/committee/member.png'
         },
         {
             'name': 'Shital Thakkar',
             'role': 'Vice President',
-            'image_src': require('../imgs/committee/sheetal.jpeg').default
+            'image_src': require('../imgs/committee/sheetal.jpeg')
             // 'image_src': process.env.PUBLIC_URL + '/imgs/committee/sheetal.jpeg'
         },
         {
             'name': 'Mayur Thakkar',
             'role': 'Secretary',
-            'image_src': require('../imgs/committee/mayur.jpeg').default
+            'image_src': require('../imgs/committee/mayur.jpeg')
             // 'image_src': process.env.PUBLIC_URL + '/imgs/committee/mayur.jpeg'
         },
         {
             'name': 'Trupti Thakkar',
             'role': 'Treasurer',
-            'image_src': require('../imgs/committee/trupti.jpeg').default
+            'image_src': require('../imgs/committee/trupti.jpeg')
             // 'image_src': process.env.PUBLIC_URL + '/imgs/committee/trupti.jpeg'
         },
         {
             'name': 'Jay Thakkar',
             'role': 'Joint Secretary',
-            'image_src': require('../imgs/committee/jay.jpeg').default
+            'image_src': require('../imgs/committee/jay.jpeg')
             // 'image_src': process.env.PUBLIC_URL + '/imgs/committee/jay.jpeg'
         }
     ])
@@ -77,7 +77,7 @@ export default function Events() {
         {members.map(member => (
             <Col>
                 <Card>
-                <Card.Img variant="top" src={member.image_src} height={350} />
+                <Card.Img variant="top" src={member.image_src.default} height={350} />
                 <Card.Body>
                     <Card.Title>{member.name}</Card.Title>
                     <Card.Text>{member.role}</Card.Text>
