@@ -22,8 +22,8 @@ export default function Events() {
         {
             'name': 'Amit Thakkar',
             'role': 'President',
-            // 'image_src': require('../imgs/committee/member.png')
-            'image_src': process.env.PUBLIC_URL + '/imgs/committee/member.png'
+            'image_src': require('../imgs/committee/member.png')
+            // 'image_src': process.env.PUBLIC_URL + '/imgs/committee/member.png'
         },
         {
             'name': 'Shital Thakkar',
