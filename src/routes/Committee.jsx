@@ -22,31 +22,31 @@ export default function Events() {
         {
             'name': 'Amit Thakkar',
             'role': 'President',
-            'image_src': require('../imgs/committee/member.png')
+            'image_src': require('../imgs/committee/Amit.jpg')
             // 'image_src': process.env.PUBLIC_URL + '/imgs/committee/member.png'
         },
         {
             'name': 'Shital Thakkar',
             'role': 'Vice President',
-            'image_src': require('../imgs/committee/sheetal.jpeg')
+            'image_src': require('../imgs/committee/sheetal.jpg')
             // 'image_src': process.env.PUBLIC_URL + '/imgs/committee/sheetal.jpeg'
         },
         {
             'name': 'Mayur Thakkar',
             'role': 'Secretary',
-            'image_src': require('../imgs/committee/mayur.jpeg')
+            'image_src': require('../imgs/committee/mayur.jpg')
             // 'image_src': process.env.PUBLIC_URL + '/imgs/committee/mayur.jpeg'
         },
         {
             'name': 'Trupti Thakkar',
             'role': 'Treasurer',
-            'image_src': require('../imgs/committee/trupti.jpeg')
+            'image_src': require('../imgs/committee/trupti.jpg')
             // 'image_src': process.env.PUBLIC_URL + '/imgs/committee/trupti.jpeg'
         },
         {
             'name': 'Jay Thakkar',
             'role': 'Joint Secretary',
-            'image_src': require('../imgs/committee/jay.jpeg')
+            'image_src': require('../imgs/committee/jay.jpg')
             // 'image_src': process.env.PUBLIC_URL + '/imgs/committee/jay.jpeg'
         }
     ])
@@ -73,63 +73,18 @@ export default function Events() {
             <h3 className="text-orange">Executive Committee</h3>
         </div>
         <div>&nbsp;</div>
-        <Row xs={1} md={3} className="g-4">
-            <Col>
-                <Card>
-                <Card.Img variant="top" src={require('../imgs/committee/member.png')} height={350} />
-                <Card.Body>
-                    <Card.Title>Amit Thakkar</Card.Title>
-                    <Card.Text>President</Card.Text>
-                </Card.Body>
-                </Card>
-            </Col>
-            <Col>
-                <Card>
-                <Card.Img variant="top" src={require('../imgs/committee/sheetal1.jpg')} height={350} />
-                <Card.Body>
-                    <Card.Title>Shital Thakkar</Card.Title>
-                    <Card.Text>Vice President</Card.Text>
-                </Card.Body>
-                </Card>
-            </Col>
-            <Col>
-                <Card>
-                <Card.Img variant="top" src={require('../imgs/committee/mayur.jpeg')} height={350} />
-                <Card.Body>
-                    <Card.Title>Mayur Thakkar</Card.Title>
-                    <Card.Text>Secretary</Card.Text>
-                </Card.Body>
-                </Card>
-            </Col>
-            <Col>
-                <Card>
-                <Card.Img variant="top" src={require('../imgs/committee/trupti.jpeg')} height={350} />
-                <Card.Body>
-                    <Card.Title>Trupti Thakkar</Card.Title>
-                    <Card.Text>Treasurer</Card.Text>
-                </Card.Body>
-                </Card>
-            </Col>
-            <Col>
-                <Card>
-                <Card.Img variant="top" src={require('../imgs/committee/jay.jpeg')} height={350} />
-                <Card.Body>
-                    <Card.Title>Jay Thakkar</Card.Title>
-                    <Card.Text>Joint Secretary</Card.Text>
-                </Card.Body>
-                </Card>
-            </Col>
-        {/* {members.map(member => (
-            <Col>
-                <Card>
-                <Card.Img variant="top" src={member.image_src} height={350} />
-                <Card.Body>
-                    <Card.Title>{member.name}</Card.Title>
-                    <Card.Text>{member.role}</Card.Text>
-                </Card.Body>
-                </Card>
-            </Col>
-        ))} */}
+        <Row xs={1} md={5} className="g-4">
+            {members.map(member => (
+                <Col>
+                    <Card>
+                    <Card.Img variant="top" src={member.image_src} height={350} />
+                    <Card.Body>
+                        <Card.Title>{member.name}</Card.Title>
+                        <Card.Text>{member.role}</Card.Text>
+                    </Card.Body>
+                    </Card>
+                </Col>
+            ))}
         </Row>
         <div>&nbsp;</div>
     </Container>);
