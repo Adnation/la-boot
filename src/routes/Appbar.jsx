@@ -32,9 +32,9 @@ export default function Header(props) {
             <Nav.Link className="nav-text">
                 <Link to="/gallery" className="nav-link-route">Photo Gallery</Link>
             </Nav.Link>
-            <Nav.Link className="nav-text">
+            {/* <Nav.Link className="nav-text">
                 <Link to="/contact" className="nav-link-route">Contact Us</Link>
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link className="nav-text">
                 <Link to="/survey" className="nav-link-route">Survey</Link>
             </Nav.Link>
@@ -62,9 +62,9 @@ export default function Header(props) {
             <Nav.Link className="nav-text">
                 <Link to="/gallery" className="nav-link-route">Photo Gallery</Link>
             </Nav.Link>
-            <Nav.Link className="nav-text">
+            {/* <Nav.Link className="nav-text">
                 <Link to="/contact" className="nav-link-route">Contact Us</Link>
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link className="nav-text">
                 <Link to="/rsvp" className="nav-link-route">RSVP / Pay</Link>
             </Nav.Link>
