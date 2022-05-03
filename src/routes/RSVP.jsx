@@ -32,6 +32,9 @@ export default function Events() {
     };
 
     useEffect(() => {
+        console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        console.log(`${configs.API_BASE_URL}/events`);
+        console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         fetch(`${configs.API_BASE_URL}/events`)
         .then(res => res.json())
         .then(

@@ -220,8 +220,8 @@ export default function Footer() {
                         </div>
                         <div className="col-md-2 mb-md-0 mb-1"></div>
                     </div>
-                    <div className="footer-copyright text-center py-3">Website developed and maintained by: 
-                        <span><a href="https://techwishsolutions.com/" target="_blank">Aditya Thakkar</a>For LA-DFW</span>
+                    <div className="footer-copyright text-center py-3">Website developed and maintained by:
+                        <span><a href="https://techwishsolutions.com/" target="_blank">&nbsp;Aditya Thakkar</a>For LA-DFW</span>
                     </div>
                 </div>
             </footer>
