@@ -112,7 +112,7 @@ export default function Events() {
         redirect: 'follow'
         };
         
-        fetch(`${configs.API_BASE_URL}/rsvp`, requestOptions)
+        fetch(`${configs.API_BASE_URL}/rsvp/post`, requestOptions)
         .then(response => {
             response.text();
             setSubSuccess(true);

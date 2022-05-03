@@ -67,7 +67,7 @@ export default function Footer() {
         redirect: 'follow'
         };
         
-        fetch(`${configs.API_BASE_URL}/subscribers`, requestOptions)
+        fetch(`${configs.API_BASE_URL}/subscribers/post`, requestOptions)
         .then(response => {response.text(); setSubSuccess(true); setSubFormData({subName: '', subPhone: '', subEmail:'' })})
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
