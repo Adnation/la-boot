@@ -192,7 +192,7 @@ export default function Footer() {
                         <div className="col-md-2 mb-md-0 mb-2">
                             <Form.Group className="mb-2" controlId="formBasicEmail">
                                 <Form.Control
-                                type="tel"
+                                type="text"
                                 placeholder="Enter phone: 123-456-7890"
                                 value={subFormData.subPhone}
                                 name="subPhone"
