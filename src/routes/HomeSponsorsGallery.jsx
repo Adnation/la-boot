@@ -34,37 +34,37 @@ export default function Home(props) {
                 <Carousel responsive={responsive}>
                     <div className='px-5'>
                         <Card>
-                            <Card.Img variant="top" src={require('../imgs/sponsors/patel.png?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
+                            <Card.Img variant="top" src={require('../imgs/logo-soon1.png?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
                         </Card>
                     </div>
                     <div className='px-5'>
                         <Card>
-                            <Card.Img variant="top" src={require('../imgs/sponsors/ib.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
+                            <Card.Img variant="top" src={require('../imgs/logo-soon1.png?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
                         </Card>
                     </div>
                     <div className='px-5'>
                         <Card>
-                            <Card.Img variant="top" src={require('../imgs/sponsors/tilak.png?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
+                            <Card.Img variant="top" src={require('../imgs/logo-soon1.png?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
                         </Card>
                     </div>
                     <div className='px-5'>
                         <Card>
-                            <Card.Img variant="top" src={require('../imgs/sponsors/funasia.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
+                            <Card.Img variant="top" src={require('../imgs/logo-soon1.png?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
                         </Card>
                     </div>
                     <div className='px-5'>
                         <Card>
-                            <Card.Img variant="top" src={require('../imgs/sponsors/patel.png?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
+                            <Card.Img variant="top" src={require('../imgs/logo-soon1.png?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
                         </Card>
                     </div>
                     <div className='px-5'>
                         <Card>
-                            <Card.Img variant="top" src={require('../imgs/sponsors/ib.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
+                            <Card.Img variant="top" src={require('../imgs/logo-soon1.png?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
                         </Card>
                     </div>
                     <div className='px-5'>
                         <Card>
-                            <Card.Img variant="top" src={require('../imgs/sponsors/tilak.png?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
+                            <Card.Img variant="top" src={require('../imgs/logo-soon1.png?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
                         </Card>
                     </div>
                     <div className='px-5'>
