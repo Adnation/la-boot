@@ -69,7 +69,7 @@ export default function Home(props) {
                     </div>
                     <div className='px-5'>
                         <Card>
-                            <Card.Img variant="top" src={require('../imgs/sponsors/funasia.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
+                            <Card.Img variant="top" src={require('../imgs/logo-soon1.png?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
                         </Card>
                     </div>
                 </Carousel>
