@@ -9,7 +9,7 @@ export default function Home(props) {
     useEffect(() => {
         // fetch(`${configs.API_BASE_URL}/events`)
         
-        fetch(`https://api.lohanadfw.org/events`)
+        fetch(`https://api.lohanadfw.org/events/upcoming-events`)
         .then(res => res.json())
         .then(
             (Revents) => {

@@ -9,7 +9,7 @@ export default function Events() {
     
 
     useEffect(() => {
-        fetch(`${configs.API_BASE_URL}/events`)
+        fetch(`${configs.API_BASE_URL}/events/upcoming-events`)
         .then(res => res.json())
         .then(
             (Revents) => {
