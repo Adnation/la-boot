@@ -7,7 +7,9 @@ export default function Home(props) {
     const [events, setEvents] = useState([])
     
     useEffect(() => {
-        fetch(`${configs.API_BASE_URL}/events`)
+        // fetch(`${configs.API_BASE_URL}/events`)
+        
+        fetch(`https://api.lohanadfw.org/events`)
         .then(res => res.json())
         .then(
             (Revents) => {
