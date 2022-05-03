@@ -32,9 +32,6 @@ export default function Events() {
     };
 
     useEffect(() => {
-        console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        console.log(`${configs.API_BASE_URL}/events/upcoming-events`);
-        console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         fetch(`${configs.API_BASE_URL}/events/upcoming-events`)
         .then(res => res.json())
         .then(
@@ -167,7 +164,7 @@ export default function Events() {
                                 </Form.Group>
                                 <Form.Group className="mb-3">
                                     <Form.Control
-                                    type="tel"
+                                    type="text"
                                     placeholder="Phone number - Format: 123-456-7890"
                                     value={subFormData.phone}
                                     name="phone"
