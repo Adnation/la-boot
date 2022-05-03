@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import env from "react-dotenv";
+import configs from '../configs'
 import Carousel from "react-multi-carousel";
 import WithStyles from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -30,7 +30,7 @@ export default function Home(props) {
     const [photos, setPhotos] = useState([]);
 
     useEffect(() => {
-        fetch(`${env.API_BASE_URL}/events/get-latest-photos`)
+        fetch(`${configs.API_BASE_URL}/events/get-latest-photos`)
         .then(res => res.json())
         .then(
             (Revents) => {

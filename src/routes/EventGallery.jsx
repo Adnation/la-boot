@@ -1,4 +1,4 @@
-import env from "react-dotenv";
+import configs from '../configs'
 import React, { useState, useEffect } from "react";
 import { Container, Card, Row, Col, Form, Alert, Button, Image } from "react-bootstrap"
 import GalleryComponent from "./GalleryComponent";
@@ -9,7 +9,7 @@ export default function Events() {
     const [eventPhotos, setEventPhotos] = useState([]);
 
     useEffect(() => {
-        fetch(`${env.API_BASE_URL}/events/past-events`)
+        fetch(`${configs.API_BASE_URL}/events/past-events`)
         .then(res => res.json())
         .then(
             (Revents) => {
@@ -29,7 +29,7 @@ export default function Events() {
             setEventPhotos([]);
             return false;
         }
-        fetch(`${env.API_BASE_URL}/events/get-event-photos/${e.target.value}`)
+        fetch(`${configs.API_BASE_URL}/events/get-event-photos/${e.target.value}`)
         .then(res => res.json())
         .then(
             (Revents) => {

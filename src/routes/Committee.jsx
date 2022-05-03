@@ -1,9 +1,9 @@
-import env from "react-dotenv";
+import configs from '../configs'
 import React, { useEffect, useState } from 'react'
 import { Container, Card, Row, Col } from "react-bootstrap"
 
 const fetchMembers = async () => {
-    const res = await fetch(`${env.API_BASE_URL}/committee`)
+    const res = await fetch(`${configs.API_BASE_URL}/committee`)
     const json = await res.json()
     return json.result
 }
@@ -52,7 +52,7 @@ export default function Events() {
     ])
 
     // useEffect(() => {
-    //     fetch(`${env.API_BASE_URL}/committee`)
+    //     fetch(`${configs.API_BASE_URL}/committee`)
     //     .then(res => res.json())
     //     .then(
     //         (members) => {

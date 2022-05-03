@@ -1,4 +1,4 @@
-import env from "react-dotenv";
+import configs from '../configs'
 import React, { useEffect, useState } from 'react'
 
 
@@ -7,7 +7,7 @@ export default function Home(props) {
     const [events, setEvents] = useState([])
     
     useEffect(() => {
-        fetch(`${env.API_BASE_URL}/events`)
+        fetch(`${configs.API_BASE_URL}/events`)
         .then(res => res.json())
         .then(
             (Revents) => {

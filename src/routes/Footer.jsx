@@ -1,4 +1,4 @@
-import env from "react-dotenv";
+import configs from '../configs'
 import React, { useState } from "react";
 import { ListGroup, Form, Button, Row, Col, Alert } from 'react-bootstrap/';
 import { GeoAlt, Telephone, EnvelopePaper, Quote } from 'react-bootstrap-icons';
@@ -67,7 +67,7 @@ export default function Footer() {
         redirect: 'follow'
         };
         
-        fetch(`${env.API_BASE_URL}/subscribers`, requestOptions)
+        fetch(`${configs.API_BASE_URL}/subscribers`, requestOptions)
         .then(response => {response.text(); setSubSuccess(true); setSubFormData({subName: '', subPhone: '', subEmail:'' })})
         .then(result => console.log(result))
         .catch(error => console.log('error', error));

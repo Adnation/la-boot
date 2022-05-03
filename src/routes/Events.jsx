@@ -1,4 +1,4 @@
-import env from "react-dotenv";
+import configs from '../configs'
 import { Container, Card, Row, Col, Accordion, ListGroup, Badge } from "react-bootstrap"
 import React, { useEffect, useState } from 'react'
 
@@ -9,7 +9,7 @@ export default function Events() {
     
 
     useEffect(() => {
-        fetch(`${env.API_BASE_URL}/events`)
+        fetch(`${configs.API_BASE_URL}/events`)
         .then(res => res.json())
         .then(
             (Revents) => {
@@ -22,7 +22,7 @@ export default function Events() {
             console.log(error);
             }
         )
-        fetch(`${env.API_BASE_URL}/events/past-events`)
+        fetch(`${configs.API_BASE_URL}/events/past-events`)
         .then(res => res.json())
         .then(
             (Revents) => {

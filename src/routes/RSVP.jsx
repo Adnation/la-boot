@@ -1,4 +1,4 @@
-import env from "react-dotenv";
+import configs from '../configs'
 import React, { useState, useEffect } from "react";
 import { Container, Card, Row, Col, Form, Alert, Button, Image } from "react-bootstrap"
 
@@ -32,7 +32,7 @@ export default function Events() {
     };
 
     useEffect(() => {
-        fetch(`${env.API_BASE_URL}/events`)
+        fetch(`${configs.API_BASE_URL}/events`)
         .then(res => res.json())
         .then(
             (Revents) => {
@@ -112,7 +112,7 @@ export default function Events() {
         redirect: 'follow'
         };
         
-        fetch(`${env.API_BASE_URL}/rsvp`, requestOptions)
+        fetch(`${configs.API_BASE_URL}/rsvp`, requestOptions)
         .then(response => {
             response.text();
             setSubSuccess(true);
