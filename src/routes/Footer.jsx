@@ -85,6 +85,10 @@ export default function Footer() {
                     </ListGroup.Item>
 
                     <ListGroup.Item action className="quick-link">
+                        <Link to="/about" className="nav-link-route">Home</Link>
+                    </ListGroup.Item>
+
+                    <ListGroup.Item action className="quick-link">
                         <Link to="/committee" className="nav-link-route">Committee</Link>
                     </ListGroup.Item>
 
@@ -93,19 +97,11 @@ export default function Footer() {
                     </ListGroup.Item>
 
                     <ListGroup.Item action className="quick-link">
-                        <Link to="/community" className="nav-link-route">Community Roundup</Link>
-                    </ListGroup.Item>
-
-                    <ListGroup.Item action className="quick-link">
                         <Link to="/sponsors" className="nav-link-route">Sponsors</Link>
                     </ListGroup.Item>
 
                     <ListGroup.Item action className="quick-link">
                         <Link to="/gallery" className="nav-link-route">Photo Gallery</Link>
-                    </ListGroup.Item>
-
-                    <ListGroup.Item action className="quick-link">
-                        <Link to="/contact" className="nav-link-route">Contact Us</Link>
                     </ListGroup.Item>
 
                     <ListGroup.Item action className="quick-link">
