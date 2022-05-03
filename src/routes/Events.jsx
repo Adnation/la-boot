@@ -6,7 +6,11 @@ export default function Events() {
 
     const [events, setEvents] = useState([])
     const [pastEvents, setPastEvents] = useState([])
-    
+
+    const URL_REGEX = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
+
+    const renderText = txt =>
+    txt.split(" ").map(part => URL_REGEX.test(part) ? <a href={part} target="_blank">{part} </a> : part + " ");
 
     useEffect(() => {
         fetch(`${configs.API_BASE_URL}/events/upcoming-events`)
@@ -80,7 +84,7 @@ export default function Events() {
                                         </Col>
                                     </Row>
                                     <div>&nbsp;</div>
-                                    {event.description}
+                                        {renderText(event.description)}
                                 </Card.Body>
                             </Accordion.Body>
                         </Accordion.Item>
