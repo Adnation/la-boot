@@ -85,7 +85,7 @@ export default function Footer() {
                     </ListGroup.Item>
 
                     <ListGroup.Item action className="quick-link">
-                        <Link to="/about" className="nav-link-route">Home</Link>
+                        <Link to="/about" className="nav-link-route">About</Link>
                     </ListGroup.Item>
 
                     <ListGroup.Item action className="quick-link">
