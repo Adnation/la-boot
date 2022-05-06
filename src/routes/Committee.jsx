@@ -32,6 +32,12 @@ export default function Events() {
             // 'image_src': process.env.PUBLIC_URL + '/imgs/committee/sheetal.jpeg'
         },
         {
+            'name': 'Bharat Thakkar',
+            'role': 'Chairman',
+            'image_src': require('../imgs/committee/bharat.jpg')
+            // 'image_src': process.env.PUBLIC_URL + '/imgs/committee/sheetal.jpeg'
+        },
+        {
             'name': 'Mayur Thakkar',
             'role': 'Secretary',
             'image_src': require('../imgs/committee/mayur.jpg')
@@ -73,19 +79,27 @@ export default function Events() {
             <h3 className="text-orange">Executive Committee</h3>
         </div>
         <div>&nbsp;</div>
-        <Row xs={1} md={5} className="g-4">
-            {members.map(member => (
-                <Col>
-                    <Card>
-                    <Card.Img variant="top" src={member.image_src} height={350} />
-                    <Card.Body>
-                        <Card.Title>{member.name}</Card.Title>
-                        <Card.Text>{member.role}</Card.Text>
-                    </Card.Body>
-                    </Card>
-                </Col>
-            ))}
+        <Row>
+            <Col md={1}></Col>
+            <Col md={10}>
+                <Row xs={1} md={3} className="g-4">
+                    {members.map(member => (
+                        <Col>
+                            <Card>
+                            <Card.Img variant="top" src={member.image_src} height={350} />
+                            <Card.Body>
+                                <Card.Title>{member.name}</Card.Title>
+                                <Card.Text>{member.role}</Card.Text>
+                            </Card.Body>
+                            </Card>
+                        </Col>
+                    ))}
+                </Row>
+            </Col>
+            <Col md={1}>
+            </Col>
         </Row>
+        
         <div>&nbsp;</div>
     </Container>);
   }
