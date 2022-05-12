@@ -69,6 +69,9 @@ export default function Header(props) {
             <Nav.Link className="nav-text" onClick={() => setExpanded(false)} >
                 <Link to="/rsvp" className="nav-link-route">RSVP / Pay</Link>
             </Nav.Link>
+            <Nav.Link className="nav-text" onClick={() => setExpanded(false)} >
+                <Link to="/survey" className="nav-link-route">Surveys</Link>
+            </Nav.Link>
         </Nav>
     }
 

@@ -184,8 +184,8 @@ export default function Events() {
                             Praising Lohanas, Akha Bhagat said:
                             <div className='text-orange'>
                                 <div>&nbsp;</div>
-                                <sup className="text-orange">"</sup>Thakkars went for name, not for money <br />
-                                Worked in front for fame, and did not fail.<sup className="text-orange">"</sup>
+                                <sup className="text-orange"></sup>Thakkars went for name, not for money <br />
+                                Worked in front for fame, and did not fail.<sup className="text-orange"></sup>
                             </div>
                         </h5>
                     </div>
