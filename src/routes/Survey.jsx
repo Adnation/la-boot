@@ -9,8 +9,7 @@ export default function Surveys() {
     const [selectedSurvey, setSelectedSurvey] = useState(-1);
 
     useEffect(() => {
-        fetch(`${configs.API_BASE_URL}/survey`)
-        // fetch(`http://localhost:8000/survey`)
+        fetch(`${configs.API_BASE_URL}/survey/fetch-all`)
         .then(res => res.json())
         .then(
             (Revents) => {
