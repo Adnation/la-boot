@@ -80,13 +80,13 @@ export default function Events() {
         </div>
         <div>&nbsp;</div>
         <Row>
-            <Col md={1}></Col>
-            <Col md={10}>
+            {/* <Col md={1}></Col> */}
+            <Col md={12}>
                 <Row xs={1} md={3} className="g-4">
                     {members.map(member => (
                         <Col>
                             <Card>
-                            <Card.Img variant="top" src={member.image_src} height={350} />
+                            <Card.Img variant="top" src={member.image_src} height={500} />
                             <Card.Body>
                                 <Card.Title>{member.name}</Card.Title>
                                 <Card.Text>{member.role}</Card.Text>
@@ -96,8 +96,7 @@ export default function Events() {
                     ))}
                 </Row>
             </Col>
-            <Col md={1}>
-            </Col>
+            {/* <Col md={1}></Col> */}
         </Row>
         
         <div>&nbsp;</div>

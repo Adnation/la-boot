@@ -22,6 +22,8 @@ import Login from './routes/Login';
 import AdminHome from './routes/AdminHome';
 import Survey from './routes/Survey';
 import News from './routes/News';
+import Sandesh from './routes/Sandesh';
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -45,6 +47,7 @@ root.render(
           <Route path="rsvp" element={<RSVP />} />
           
           <Route path="survey" element={<Survey />} />
+          <Route path="sandesh" element={<Sandesh />} />
           <Route path="news" element={<News />} />
 
           

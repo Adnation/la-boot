@@ -42,7 +42,7 @@
 }
 
 .text-left {
-  text-align: 'left'
+  text-align: 'left' !important;
 }
 
 .text-center {
@@ -165,4 +165,36 @@ a:hover {
 
 a:active {
   color: #0d6efd !important;
+}
+
+.cornered-image {
+  border-radius: 35px !important;
+}
+
+.flipped-icon {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.center {
+  text-align: center;
+}
+
+.vertical-text-center {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+/* ul {
+  display: table;
+  margin: 0 auto;
+} */
+
+.border-right {
+  border-right: 1px solid black;
 }
