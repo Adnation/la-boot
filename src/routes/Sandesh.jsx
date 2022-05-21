@@ -30,8 +30,8 @@ export default function Sandesh() {
     })
 
     useEffect(() => {
-        // fetch(`${configs.API_BASE_URL}/sandesh/get-archive`)
-        fetch(`http://localhost:8000/sandesh/get-archive`)
+        fetch(`${configs.API_BASE_URL}/sandesh/get-archive`)
+        // fetch(`http://localhost:8000/sandesh/get-archive`)
         .then(res => res.json())
         .then(
             (docs) => {
@@ -103,8 +103,8 @@ export default function Sandesh() {
         redirect: 'follow'
         };
 
-        // fetch(`${configs.API_BASE_URL}/sandesh/post-request`, requestOptions)
-        fetch(`http://localhost:8000/sandesh/post-request`, requestOptions)
+        fetch(`${configs.API_BASE_URL}/sandesh/post-request`, requestOptions)
+        // fetch(`http://localhost:8000/sandesh/post-request`, requestOptions)
         .then(res => {
             if(res.status >= 400) {
                 throw new Error("Something went wrong. Please try again after sometime.");
