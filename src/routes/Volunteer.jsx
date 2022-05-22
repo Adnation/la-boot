@@ -64,7 +64,7 @@ export default function Events() {
             "name": subFormData.name,
             "email": subFormData.email,
             "phone": subFormData.phone,
-            "free_text": subFormData.freeText
+            "free_message": subFormData.freeText
         });
 
         var requestOptions = {
