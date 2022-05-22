@@ -82,7 +82,7 @@ export default function Events() {
                 throw new Error("Something went wrong. Please try again after sometime.");
             }
             setSubSuccess(true);
-            setSubFormData({name: '', email: '', phone:'', free_text:''});
+            setSubFormData({name: '', email: '', phone:'', freeText:''});
             return res.json();
         })
         .then(data => {
