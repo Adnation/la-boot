@@ -82,7 +82,7 @@ export default function Events() {
                 throw new Error("Something went wrong. Please try again after sometime.");
             }
             setSubSuccess(true);
-            setSubFormData({name: '', email: '', subject:'', freeText:''});
+            setSubFormData({name: '', email: '', phone:'', free_text:''});
             return res.json();
         })
         .then(data => {
@@ -136,7 +136,7 @@ export default function Events() {
                                         <Form.Label column sm="3"><strong>Message:</strong></Form.Label>
                                         <Col sm="9">
                                             <Form.Control as="textarea" rows={3} 
-                                            placeholder="Additional Message" value={subFormData.message} name="message"
+                                            placeholder="Additional Message" value={subFormData.freeText} name="freeText"
                                             onChange={e => handleChange(e)} />
                                         </Col>
                                     </Form.Group>
