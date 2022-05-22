@@ -23,6 +23,7 @@ import AdminHome from './routes/AdminHome';
 import Survey from './routes/Survey';
 import News from './routes/News';
 import Sandesh from './routes/Sandesh';
+import Volunteer from './routes/Volunteer';
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -48,6 +49,7 @@ root.render(
           
           <Route path="survey" element={<Survey />} />
           <Route path="sandesh" element={<Sandesh />} />
+          <Route path="volunteer" element={<Volunteer />} />
           <Route path="news" element={<News />} />
 
           
