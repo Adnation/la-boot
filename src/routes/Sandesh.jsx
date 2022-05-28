@@ -18,7 +18,7 @@ export default function Sandesh() {
         'Bhupendra Thakkar',
         'Shital Thakkar',
         'Ami Thakkar',
-        'Dr. Nayna Thakkar',
+        'Dr. Nayna Jobanputra',
         'Swayam Thakkar'
     ])
 
