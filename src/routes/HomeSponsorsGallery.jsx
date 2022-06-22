@@ -8,11 +8,11 @@ const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 5
+      items: 4
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4
+      items: 3
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -34,7 +34,7 @@ export default function Home(props) {
                 <Carousel responsive={responsive}>
                     <div className='px-5'>
                         <Card>
-                            <Card.Img variant="top" src={require('../imgs/logo-soon1.png?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
+                            <Card.Img variant="top" src={require('../imgs/sponsors/birju.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')} />
                         </Card>
                     </div>
                     <div className='px-5'>
