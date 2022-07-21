@@ -8,7 +8,6 @@ import Subscribe from './routes/Subscribe';
 import Topbar from './routes/Topbar';
 import { Outlet, Link } from "react-router-dom";
 
-
 function App() {
   return (
     <div className="App">
